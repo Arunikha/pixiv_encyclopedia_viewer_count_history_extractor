@@ -51,8 +51,8 @@ pip install -r requirements.txt
 ### 0. Create virtual environment
 
 ```bash
-pyenv virtualenv 3.12.0 env
-pyenv activate env
+python3 -m venv env
+source env/bin/activate
 ```
 
 ### 1. Fetch by article title
@@ -114,13 +114,14 @@ The script will detect that `ブルーアーカイブ.html` is a file and will p
 ###　4. Test
 
 ```bash
+pip install -r requirements.test.txt
 pytest'
 ```
 
 ### 5. Deactivate environment
 
 ```bash
-pyenv deactivate
+deactivate
 ```
 
 

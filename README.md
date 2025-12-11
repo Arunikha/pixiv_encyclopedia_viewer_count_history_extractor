@@ -48,6 +48,13 @@ pip install -r requirements.txt
 
 ## Usage
 
+### 0. Create virtual environment
+
+```bash
+pyenv virtualenv 3.12.0 env
+pyenv activate env
+```
+
 ### 1. Fetch by article title
 
 ```bash
@@ -109,6 +116,13 @@ The script will detect that `ブルーアーカイブ.html` is a file and will p
 ```bash
 pytest'
 ```
+
+### 5. Deactivate environment
+
+```bash
+pyenv deactivate
+```
+
 
 ---
 

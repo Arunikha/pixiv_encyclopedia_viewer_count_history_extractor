@@ -44,6 +44,13 @@ pip install -r requirements.txt
 
 ## 使い方
 
+### 0. Create virtual environment
+
+```bash
+pyenv virtualenv 3.12.0 env
+pyenv activate env
+```
+
 ### 1. 記事タイトルから取得（おすすめ）
 
 ```bash
@@ -103,6 +110,12 @@ python extract_view_history.py ブルーアーカイブ.html --csv ブルーア�
 
 ```bash
 pytest'
+```
+
+### 5. Deactivate environment
+
+```bash
+pyenv deactivate
 ```
 
 ---

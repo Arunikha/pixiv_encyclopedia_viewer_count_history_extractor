@@ -16,8 +16,12 @@ An English version of this README is available in [`README.md`](README.md).
 
 ## 概要
 
-ページ内に埋め込まれている JSON（`__NEXT_DATA__`）から `/get_graph_data` → `tagCounts` を取り出し、  
-`{date, count}` のシンプルな時系列データとして出力します。
+Pixiv大百科の閲覧履歴は、1週間スパンの周期性（平日／休日）がはっきり表れる実データです。
+
+また、作品のイベントやSNSでのバズによる突発的なスパイクも含まれるため、次のような時系列分析の教材として利用できます。
+- 可視化・平滑化の例
+- 季節性分解の例
+- 予測モデル（ARIMA, Prophet など）のサンプルデータ
 
 > ⚠️ **非公式ツールです**  
 > このツールは Pixiv 公式のものではありません。  
@@ -54,7 +58,7 @@ source env/bin/activate
 pip install -r requirements.txt
 ```
 
-### 1. 記事タイトルから取得（おすすめ）
+### 1. 記事タイトルから取得
 
 ```bash
 python src/extract_viewer_history.py "ブルーアーカイブ"

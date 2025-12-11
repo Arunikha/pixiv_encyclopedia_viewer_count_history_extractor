@@ -1,0 +1,123 @@
+# [Pixiv Encyclopedia Viewer History Extractor](https://github.com/europanite/pixiv_encyclopedia_viewer_count_history_extractor "Pixiv Encyclopedia Viewer History Extractor")
+
+## English README
+
+An English version of this README is available in [`README.md`](README.md).
+
+## 日本語版
+
+Pixiv百科事典（Pixiv Encyclopedia / pixiv百科事典）の記事から、**日ごとの閲覧数（view history）を抽出するためのスクリプト**です。
+
+ページ内に埋め込まれている JSON（`__NEXT_DATA__`）から `/get_graph_data` → `tagCounts` を取り出し、  
+`{date, count}` のシンプルな時系列データとして出力します。
+
+> ⚠️ **非公式ツールです**  
+> このツールは Pixiv 公式のものではありません。  
+> 利用にあたっては、Pixiv の利用規約・robots.txt を必ず守ってください。
+
+---
+
+## 機能
+
+- **記事タイトル**（例: `"ブルーアーカイブ"`）を指定して直接 Pixiv百科事典から取得
+- すでに保存した **ローカル HTML ファイル** を解析することも可能
+- 標準出力に **JSON Lines** 形式で出力  
+  （1 行につき `{"date": "...", "count": ...}` を 1 レコード）
+- `--csv` オプションで **CSV ファイル** にもエクスポート
+
+---
+
+## 動作環境
+
+- Python 3.8 以上
+- 使用ライブラリ:
+  - `requests`
+  - `beautifulsoup4`
+
+インストール例:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## 使い方
+
+### 1. 記事タイトルから取得（おすすめ）
+
+```bash
+python extract_view_history.py "ブルーアーカイブ"
+```
+
+このコマンドは:
+
+- `https://dic.pixiv.net/a/ブルーアーカイブ` にアクセス
+- ページ内 JSON を解析
+- 標準出力に 1 行 1 レコードの JSON を出力します:
+
+```json
+{"date": "2025-07-01", "count": 141}
+{"date": "2025-07-02", "count": 132}
+{"date": "2025-07-03", "count": 213}
+...
+```
+
+ファイルに保存したい場合:
+
+```bash
+python extract_view_history.py "ブルーアーカイブ" > ブルーアーカイブ.jsonl
+```
+
+### 2. CSV で保存する
+
+`--csv` オプションで CSV を同時に出力できます（標準出力の JSON はそのまま）。
+
+```bash
+python extract_view_history.py "ブルーアーカイブ" --csv ブルーアーカイブ.csv
+```
+
+出力される CSV の例:
+
+```csv
+date,count
+2025-07-01,141
+2025-07-02,132
+2025-07-03,213
+...
+```
+
+### 3. ローカル HTML ファイルを解析する
+
+事前にブラウザから HTML を保存してある場合:
+
+```bash
+python extract_view_history.py ブルーアーカイブ.html
+python extract_view_history.py ブルーアーカイブ.html --csv ブルーアーカイブ.csv
+```
+
+`ブルーアーカイブ.html` というファイルが存在すれば、  
+タイトルではなく **ローカルファイル** として扱われます。
+
+###　4. Test
+
+```bash
+pytest'
+```
+
+---
+
+## 制限事項
+
+- Pixiv百科事典の内部 JSON 構造（`__NEXT_DATA__` / `swrFallback` / `/get_graph_data` など）に依存しています。  
+  フロントエンド構造が変更されると動かなくなる可能性があります。
+- このスクリプトにはアクセス回数制限などは入れていません。  
+  - 連続アクセスしすぎない  
+  - 個人利用・検証用途など、常識的な範囲での利用を推奨します。
+- あくまで個人的な解析・研究用途を想定したシンプルなツールです。
+
+---
+
+## ライセンス
+
+- Apache License 2.0

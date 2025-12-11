@@ -2,6 +2,7 @@
 
 [![CodeQL Advanced](https://github.com/europanite/pixiv_encyclopedia_viewer_count_history_extractor/actions/workflows/codeql.yml/badge.svg)](https://github.com/europanite/pixiv_encyclopedia_viewer_count_history_extractor/actions/workflows/codeql.yml)
 [![Python Lint](https://github.com/europanite/pixiv_encyclopedia_viewer_count_history_extractor/actions/workflows/lint.yml/badge.svg)](https://github.com/europanite/pixiv_encyclopedia_viewer_count_history_extractor/actions/workflows/lint.yml)
+[![Pytest](https://github.com/europanite/pixiv_encyclopedia_viewer_count_history_extractor/actions/workflows/pytest.yml/badge.svg)](https://github.com/europanite/pixiv_encyclopedia_viewer_count_history_extractor/actions/workflows/pytest.yml)
 
 An Extraction Tool for Pixiv Encyclopedia Viewer Count History
 
@@ -20,7 +21,6 @@ The script reads the JSON payload embedded in the page (`__NEXT_DATA__`), extrac
 > This project is not affiliated with or endorsed by Pixiv.  
 > Please follow Pixiv's Terms of Use and robots.txt when using this script.
 
-
 ## Features
 
 - Fetch by **article title** (e.g., `"ブルーアーカイブ"`) directly from Pixiv Encyclopedia
@@ -30,7 +30,6 @@ The script reads the JSON payload embedded in the page (`__NEXT_DATA__`), extrac
 - Optional **CSV export** via `--csv output.csv`
 
 ---
-
 
 ## Requisites
 
@@ -119,7 +118,6 @@ pytest'
 ```bash
 deactivate
 ```
-
 
 ---
 

@@ -2,13 +2,14 @@
 
 [![CodeQL Advanced](https://github.com/europanite/pixiv_encyclopedia_viewer_count_history_extractor/actions/workflows/codeql.yml/badge.svg)](https://github.com/europanite/pixiv_encyclopedia_viewer_count_history_extractor/actions/workflows/codeql.yml)
 
-## English README
-
-An English version of this README is available in [`README.md`](README.md).
 
 ## 日本語版
 
 Pixiv百科事典（Pixiv Encyclopedia / pixiv百科事典）の記事から、**日ごとの閲覧数（view history）を抽出するためのスクリプト**です。
+
+## English README
+
+An English version of this README is available in [`README.md`](README.md).
 
 ページ内に埋め込まれている JSON（`__NEXT_DATA__`）から `/get_graph_data` → `tagCounts` を取り出し、  
 `{date, count}` のシンプルな時系列データとして出力します。

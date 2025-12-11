@@ -1,11 +1,11 @@
 # [Pixiv Encyclopedia Viewer History Extractor](https://github.com/europanite/pixiv_encyclopedia_viewer_count_history_extractor "Pixiv Encyclopedia Viewer History Extractor")
 
-
-## Japanese README
-
-A Japanese version of this README is available in [`README.ja.md`](README.ja.md).
+[![CodeQL Advanced](https://github.com/europanite/pixiv_encyclopedia_viewer_count_history_extractor/actions/workflows/codeql.yml/badge.svg)](https://github.com/europanite/pixiv_encyclopedia_viewer_count_history_extractor/actions/workflows/codeql.yml)
 
 An Extraction Tool for Pixiv Encyclopedia Viewer Count History
+
+## Japanese README
+日本語版はこちら [`README.ja.md`](README.ja.md).
 
 ---
 

@@ -22,7 +22,7 @@ jobs:
         python-version: [ "3.8","3.9", "3.10", "3.11", "3.12", "3.13" ]
     env:
       PYTHONUTF8: "1"
-      PYTHONPATH: ${{ github.workspace }}/service
+      PYTHONPATH: ${{ github.workspace }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -39,8 +39,8 @@ jobs:
         run: |
           set -eux
           python -m pip install -U pip
-          pip install -r service/requirements.test.txt
-          if [ -f service/pyproject.toml ] || [ -f service/setup.cfg ] || [ -f service/setup.py ]; then
+          pip install -r requirements.test.txt
+          if [ -f pyproject.toml ] || [ -f setup.cfg ] || [ -f setup.py ]; then
             pip install -e service
           fi
       - name: Install deps (Windows)
@@ -49,10 +49,10 @@ jobs:
         run: |
           $ErrorActionPreference = "Stop"
           python -m pip install -U pip
-          pip install -r service/requirements.test.txt
-          $hasPythonProject = (Test-Path -Path 'service/pyproject.toml') -or
-                            (Test-Path -Path 'service/setup.cfg') -or
-                            (Test-Path -Path 'service/setup.py')
+          pip install -r requirements.test.txt
+          $hasPythonProject = (Test-Path -Path 'pyproject.toml') -or
+                            (Test-Path -Path 'setup.cfg') -or
+                            (Test-Path -Path 'setup.py')
           if ($hasPythonProject) {
             python -m pip install -e service
           } else {

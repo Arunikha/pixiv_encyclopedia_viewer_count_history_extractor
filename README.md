@@ -18,7 +18,17 @@ An Extraction Tool for Pixiv Encyclopedia Viewer Count History
 
 Extract daily view history data from a [Pixiv Encyclopedia (pixiv百科事典)](https://dic.pixiv.net/) article.
 
-The script reads the JSON payload embedded in the page (`__NEXT_DATA__`), extracts the `/get_graph_data` → `tagCounts` section, and outputs a simple time series of `{date, count}`.
+Pixiv Encyclopedia viewer history is a nice real-world time-series dataset.
+
+It often shows:
+- Weekly seasonality (weekday vs weekend traffic)
+- Occasional spikes caused by events or social media buzz
+
+You can use the extracted CSV as sample data for:
+- Time-series visualization and smoothing
+- Seasonal decomposition
+- Forecasting models (ARIMA, Prophet, etc.)
+
 
 > ⚠️ **Unofficial tool**  
 > This project is not affiliated with or endorsed by Pixiv.  
@@ -34,7 +44,7 @@ The script reads the JSON payload embedded in the page (`__NEXT_DATA__`), extrac
 
 ---
 
-## Requisites
+## Requirements
 
 - Python 3.9+
 - Dependencies:

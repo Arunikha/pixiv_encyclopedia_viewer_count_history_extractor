@@ -138,8 +138,6 @@ deactivate
 
 ## Notes / Limitations
 
-- The script relies on the current internal JSON structure of Pixiv Encyclopedia pages (Next.js `__NEXT_DATA__`).  
-  If Pixiv changes their frontend implementation, this script may break.
 - No rate limiting is implemented; please:
   - Use it responsibly
   - Avoid sending many requests in a short time

